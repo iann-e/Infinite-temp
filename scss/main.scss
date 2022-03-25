@@ -1,0 +1,298 @@
+@import "vars";
+@import "component";
+@import "icon";
+/*********************************** Banner *****************************/
+.banner {
+  background: #000 url("/assets/images/banner-image-industry.jpg") no-repeat
+    bottom center;
+  background-size: cover;
+  padding: 13.125rem 0 10rem 0; //210 - 160
+  position: relative;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.7);
+    position: absolute;
+    top: 0;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &-content-title {
+    font-size: 4rem; //80
+    line-height: 1em;
+    margin-bottom: 2.5rem; //40
+
+    @media (min-width: 1400px) {
+      font-size: 5rem; //80
+      width: 80%;
+    }
+  }
+}
+
+/*********************************** Page Info *****************************/
+
+.page-info {
+  @media (min-width: 1200px) {
+    &-content {
+      margin-right: 45px;
+      border-bottom: 1px solid;
+      padding: 20px 0 30px 0;
+    }
+  }
+
+  &-title {
+    font-size: 3rem; //60
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 20px;
+    @media (min-width: 992px) {
+      font-size: 3.75rem; //60
+    }
+  }
+
+  &-description {
+    margin-bottom: 30px;
+  }
+
+  &-video {
+    img {
+      width: 100%; //will remove
+    }
+  }
+}
+
+/*********************************** Industry Section *****************************/
+
+.industry {
+  background-color: #e9eceb;
+
+  .card-article-item-content {
+    border-color: $yellow;
+  }
+}
+
+/*********************************** Meeet the team *****************************/
+
+.team {
+  &-item {
+    margin-bottom: 48px;
+  }
+  &-item-image {
+    img {
+      width: 100%;
+    }
+  }
+
+  &-item-info {
+    padding: 30px 0;
+    border-bottom: 8px solid $yellow;
+
+    &-name {
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    &-role {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .team-item-info {
+    padding: 50px 0;
+  }
+  .team-item-info-name {
+  }
+}
+
+/*********************************** Testimonials *****************************/
+
+.testimonial-carousel {
+  .owl-item {
+    max-width: 100%;
+
+    &:not(.active.center) {
+      opacity: 0.5;
+
+      .testimonial-carousel-item-content {
+        opacity: 0;
+      }
+    }
+
+    @media (min-width: 920px) {
+      //   max-width: 1110px;
+    }
+  }
+}
+.testimonial-carousel-item {
+  position: relative;
+  @media (max-width: 576px) {
+    &.container {
+      max-width: 320px;
+      padding: 0;
+    }
+  }
+
+  &-image {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-content {
+    background-color: $yellow;
+    padding: 30px;
+
+    &-text {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &-name {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonial-carousel-item {
+    position: relative;
+
+    &-image {
+      margin-bottom: 90px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-content {
+      background-color: $yellow;
+      max-width: 625px;
+      padding: 60px 60px 50px;
+      position: absolute;
+      bottom: -90px;
+      right: 15px;
+
+      &-text {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 50px;
+      }
+
+      &-name {
+        font-size: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+/*********************************** Case Study *****************************/
+.case-studies {
+  .card-article-item-content {
+    border-color: #74d1ea;
+    background-color: #eff6f7;
+  }
+}
+
+/*********************************** Blgos *****************************/
+.blog {
+  &-carousel {
+    position: relative;
+    &-item-image {
+      img {
+        height: 263px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-carousel-item {
+    display: flex;
+  }
+
+  &-carousel-item-wrapper {
+    background-color: #b8dde1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-carousel-item-content {
+    padding: 40px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+  }
+
+  &-carousel-item-content-title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &-carousel-item-content-desc {
+    flex-grow: 1;
+  }
+
+  .owl-nav {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    font-size: 15px;
+    width: 100%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+
+    .owl-prev {
+      margin-left: 0;
+    }
+
+    .owl-next {
+      margin-right: 0;
+    }
+  }
+
+  .owl-stage {
+    display: flex;
+  }
+
+  .owl-item {
+    display: flex;
+    flex: 1 0 auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  .blog-carousel .owl-nav {
+    max-width: 1100px;
+    top: 50%;
+
+    .owl-prev {
+      margin-left: -40px;
+    }
+    .owl-next {
+      margin-right: -40px;
+    }
+  }
+}
+
+/*********************************** Our Services *****************************/
+
+.our-services {
+  .card-article-item-content {
+    background-color: #e9eceb;
+  }
+}
