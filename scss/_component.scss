@@ -54,7 +54,12 @@ body {
 .btn {
   padding: 0.33rem 4.375rem;
   font-size: 1.688rem;
+
+  &:hover {
+    animation: fadeIn ease-in 100ms;
+  }
 }
+
 .btn-outline-white {
   border: 2px solid #fff;
   color: #fff;
