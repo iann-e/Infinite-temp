@@ -333,8 +333,8 @@ body {
 }
 
 /*********************************** Meeet the team *****************************/
-.team-item {
-  margin-bottom: 48px;
+.team-items {
+  row-gap: 40px;
 }
 
 .team-item-image img {

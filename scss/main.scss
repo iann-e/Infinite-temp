@@ -77,11 +77,10 @@
 }
 
 /*********************************** Meeet the team *****************************/
-
+.team-items {
+  row-gap: 40px;
+}
 .team {
-  &-item {
-    margin-bottom: 48px;
-  }
   &-item-image {
     img {
       width: 100%;
