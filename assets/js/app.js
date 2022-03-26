@@ -5,11 +5,11 @@ $(document).ready(function(){
         loop:true,
         margin: 20,
         autoWidth: true,
-        //animateOut: 'fadeOut',  download or create animate css if you want to enable this option
         autoplay: true,
         items: 3,
         nav: false,
-        pagination: false
+        pagination: false,
+        animateOut: 'fadeOut',
     })
 
     $('.blog-carousel').owlCarousel({

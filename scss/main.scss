@@ -1,4 +1,5 @@
 @import "vars";
+@import "animate"; //this is not a complete animate css
 @import "component";
 @import "icon";
 /*********************************** Banner *****************************/
@@ -115,6 +116,12 @@
 .testimonial-carousel {
   .owl-item {
     max-width: 100%;
+
+    &.active.center {
+      .testimonial-carousel-item-content {
+        animation: lightSpeedInLeft ease-in-out 500ms;
+      }
+    }
 
     &:not(.active.center) {
       opacity: 0.5;
