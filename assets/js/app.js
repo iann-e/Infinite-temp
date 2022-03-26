@@ -10,6 +10,7 @@ $(document).ready(function(){
         nav: false,
         pagination: false,
         animateOut: 'fadeOut',
+        smartSpeed: 1000,
     })
 
     $('.blog-carousel').owlCarousel({
