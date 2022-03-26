@@ -420,8 +420,8 @@ body {
 }
 
 .btn:hover {
-  -webkit-animation: fadeIn ease-in 100ms;
-          animation: fadeIn ease-in 100ms;
+  -webkit-animation: ease-in 100ms;
+          animation: ease-in 100ms;
 }
 
 .btn-outline-white {

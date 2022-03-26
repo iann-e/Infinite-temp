@@ -20,6 +20,7 @@ $(document).ready(function(){
         items: 5,
         autoplay: true,
         nav: true,
+        smartSpeed: 1000,
         navText: ['<span class="icon-cg-arrow-left"></span>', "<span class='icon-cg-arrow-right'></span>"],
         // autoWidth: true,
         responsive: {
