@@ -9,10 +9,6 @@ body {
   padding: 5.125rem 0;
 }
 
-.section-padding-list {
-  padding: 5.125rem 0 2.75rem;
-}
-
 .section-headline {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,9 +99,13 @@ body {
   color: #ffb81c;
 }
 
-.card-article-item {
+.card-article-items {
+  row-gap: 40px;
+}
+
+.card-article-item:not(.card-article-item-no-image) {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 .card-article-item-image img {
@@ -117,11 +117,11 @@ body {
   padding: 30px;
   background-color: #fff;
   width: 100%;
-  margin-bottom: -48px;
 }
 
 .card-article-item:not(.card-article-item-no-image) .card-article-item-content {
   bottom: 0;
+  margin-bottom: -48px;
 }
 
 @media (min-width: 1200px) {
