@@ -1,7 +1,6 @@
 @import "vars";
 @import "animate"; //this is not a complete animate css
 @import "component";
-@import "icon";
 /*********************************** Banner *****************************/
 .banner {
   background: #000 url("/assets/images/banner-image-industry.jpg") no-repeat
@@ -117,35 +116,42 @@
   .owl-item {
     max-width: 100%;
 
-    &.active.center {
+    &.active .testimonial-carousel-item-content {
+      opacity: 0;
+    }
+
+    &:not(.active) + .active {
       .testimonial-carousel-item-content {
+        opacity: 1;
+      }
+    }
+    // &:not(.active:first-of-type) {
+    //   opacity: 0.5;
+
+    //   .testimonial-carousel-item-content {
+    //     opacity: 0;
+    //   }
+    // }
+
+    // .testimonial-carousel-item-content {
+    //   opacity: 0;
+    // }
+
+    @media (min-width: 990px) {
+      &.active .testimonial-carousel-item-content {
         animation: lightSpeedInLeft ease-in-out 500ms;
       }
-    }
-
-    &:not(.active.center) {
-      opacity: 0.5;
-
-      .testimonial-carousel-item-content {
+      &:not(.active) .testimonial-carousel-item-content {
         opacity: 0;
       }
-    }
-
-    @media (min-width: 920px) {
-      //   max-width: 1110px;
     }
   }
 }
 .testimonial-carousel-item {
   position: relative;
-  @media (max-width: 576px) {
-    &.container {
-      max-width: 320px;
-      padding: 0;
-    }
-  }
 
   &-image {
+    margin-bottom: 200px;
     img {
       width: 100%;
       object-fit: cover;
@@ -153,8 +159,16 @@
   }
 
   &-content {
+    position: absolute;
     background-color: $yellow;
     padding: 30px;
+    bottom: -200px;
+    max-width: 80%;
+    min-height: 300px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     &-text {
       font-weight: 500;
@@ -217,6 +231,16 @@
 
 /*********************************** Blgos *****************************/
 .blog {
+  .blog-carousel {
+    margin: auto;
+  }
+  .owl-item {
+    opacity: 0.5;
+  }
+  .owl-item.active {
+    opacity: 1;
+  }
+
   &-carousel {
     position: relative;
     &-item-image {
@@ -283,7 +307,7 @@
 
 @media (min-width: 1400px) {
   .blog-carousel .owl-nav {
-    max-width: 1100px;
+    max-width: 1400px;
     top: 50%;
 
     .owl-prev {
@@ -300,5 +324,11 @@
 .our-services {
   .card-article-item-content {
     background-color: #e9eceb;
+  }
+}
+
+@media (max-width: 991px) {
+  .card-article-carousel .col {
+    padding-right: 0;
   }
 }
