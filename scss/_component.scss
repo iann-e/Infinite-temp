@@ -9,6 +9,24 @@ body {
   padding: 5.125rem 0;
 }
 
+@media (max-width: 767px) {
+  .section-padding-carousel {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: 0;
+      margin-left: 0;
+      max-width: 100%;
+    }
+
+    .row {
+      margin-right: 0;
+      padding-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
 .section-headline {
   display: flex;
   justify-content: space-between;
